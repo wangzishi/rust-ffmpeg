@@ -836,6 +836,7 @@ impl From<AVPixelFormat> for Pixel {
             AV_PIX_FMT_RPI4_8 => Pixel::RPI4_8,
             #[cfg(feature = "rpi")]
             AV_PIX_FMT_RPI4_10 => Pixel::RPI4_10,
+            _ => todo!(),
         }
     }
 }
@@ -1120,7 +1121,7 @@ impl From<Pixel> for AVPixelFormat {
             Pixel::YUVA444P16 => AV_PIX_FMT_YUVA444P16,
 
             Pixel::XYZ12 => AV_PIX_FMT_XYZ12,
-            Pixel::NV20 => AV_PIX_FMT_NV20,
+            // Pixel::NV20 => AV_PIX_FMT_NV20,
             Pixel::AYUV64 => AV_PIX_FMT_AYUV64,
 
             Pixel::P010LE => AV_PIX_FMT_P010LE,
@@ -1263,6 +1264,7 @@ impl From<Pixel> for AVPixelFormat {
             Pixel::RPI4_8 => AV_PIX_FMT_RPI4_8,
             #[cfg(feature = "rpi")]
             Pixel::RPI4_10 => AV_PIX_FMT_RPI4_10,
+            _ => todo!(),
         }
     }
 }
